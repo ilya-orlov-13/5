@@ -13,6 +13,10 @@
 ### 2. Просмотр базы данных
 * Метод `DisplayData()`, выводящий все три таблицы на экран
 
+<img width="874" height="944" alt="image" src="https://github.com/user-attachments/assets/ccf1e06c-dfe8-4729-814d-b85d50a4cffd" />
+<img width="882" height="848" alt="image" src="https://github.com/user-attachments/assets/e7c088bf-94a0-443f-b8ac-ca9f19765c45" />
+<img width="1116" height="960" alt="image" src="https://github.com/user-attachments/assets/c6f2812b-4ff0-47f7-a291-0c1183b57575" />
+
 ### 3. Удаление элементов
 * Методы `DeleteClient()`, `DeleteRoom()`, `DeleteBooking()`
 * Перед удалением проводится проверка существования элемента по ID
@@ -21,11 +25,18 @@
   - Для номера проверяется наличие бронирований
 * При наличии связанных записей удаление невозможно
 
+<img width="735" height="144" alt="image" src="https://github.com/user-attachments/assets/441b7534-68d3-47dc-9635-a5c4e77d858c" />
+<img width="665" height="140" alt="image" src="https://github.com/user-attachments/assets/a5a6b396-cf19-4a58-a7d7-17f3887a15c6" />
+<img width="645" height="75" alt="image" src="https://github.com/user-attachments/assets/5318954c-99e2-4045-90b9-696d9c7d4089" />
+
+
 ### 4. Добавление элементов
 * Методы `AddClient()`, `AddRoom()`, `AddBooking()`:
   - `AddClient()` запрашивает ID, ФИО и место жительства, проверяет уникальность ID
   - `AddRoom()` запрашивает параметры номера, проверяет уникальность ID
   - `AddBooking()` запрашивает параметры бронирования, проверяет существование связанных сущностей и корректность дат
+
+<img width="447" height="155" alt="image" src="https://github.com/user-attachments/assets/6d65bff6-e174-471e-8139-b51d00ea579e" />
 
 ### 5. Реализация LINQ-запросов
 * **Запрос 1 (одна таблица)**: `Query1_SingleTable()`
@@ -33,11 +44,15 @@
   - Используется таблица "Номера"
   - Применяются методы `Where()`, `OrderBy()`, `ToList()`
 
+<img width="1114" height="616" alt="image" src="https://github.com/user-attachments/assets/4a896579-250b-45de-a2cf-e63941a9278e" />
+
 * **Запрос 2 (две таблицы)**: `Query2_TwoTables()`
   - Найти всех клиентов из указанного города и их бронирования
   - Используются таблицы "Клиенты" и "Бронирование"
   - Применяется метод `Join()` для объединения таблиц
   - Результаты сортируются по фамилии клиента
+
+<img width="1119" height="113" alt="image" src="https://github.com/user-attachments/assets/c71fc673-55e1-4db3-8679-605f10b35d8f" />
 
 * **Запрос 3 (три таблицы, одно значение):
   - Подсчет количества бронирований клиентов из указанного города в номерах указанной категории за указанный период
@@ -45,10 +60,14 @@
   - Применяются последовательные методы Join()
   - Используется метод Count() для получения единственного значения
 
+<img width="1729" height="152" alt="image" src="https://github.com/user-attachments/assets/657a9e52-26ac-4c22-b8b8-4a69cf89115d" />
+
 * **Запрос 4 (три таблицы, одно значение):
   - Расчет общей стоимости проживания в номерах указанной категории, забронированных клиентами из указанного города за указанный период
   - Используются все таблицы
   - Применяется метод Sum() для вычисления итогового значения
+
+<img width="1829" height="144" alt="image" src="https://github.com/user-attachments/assets/2d11d020-19f9-442a-b6c4-52b0d911eaf6" />
 
 ### 6. Сохранение изменений в Excel файл
 * Метод `SaveData()`, который записывает все изменения в Excel файл
